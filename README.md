@@ -1,9 +1,24 @@
 # German-letters-with-English-keymap
  With this script you won't need German keymap anymore!
-Takes input from your keyboard anywhere on your pc, lets you change:
--- vowels to vowels with umlauts by typing two dots after them (turns "a.." to "ä", "A.." to "Ä" etc.)
--- sss and SSS to "ß"
-In order for it to work letters and dots from the combinations need to be typed consequently, 
-the script won't change the letters if you type something like "a.,." even if you delete the comma. 
-This allows to cancel the replacement if you need to actually type "a.." by typing anything 
-except the dot and erasing it before continuing.
+
+### How It Works
+
+- **Vowels to vowels with umlauts**: Typing two dots after a vowel (e.g., `a..`, `A..`) will replace it with the corresponding umlauted character (e.g., `ä`, `Ä`).
+- **`sss` and `SSS` to `ß`**: Typing `sss` or `SSS` will be replaced with the German character `ß`.
+- It only triggers the replacement if the letters and dots are typed consecutively. For example, typing `a.,.` (with a comma between the dots) will not trigger the replacement.
+
+### Example
+
+- Typing `a..` will automatically convert it to `ä`.
+- Typing `sss` will automatically convert it to `ß`.
+
+### Installation and Usage
+
+1. **Install pynput**
+2. **Run the script**: The script will listen to your keyboard input globally.
+3. **Start typing**: Use `a..` for `ä`, `A..` for `Ä`, and `sss` for `ß`.
+
+### Notes
+
+- Ensure that you type the character combinations correctly without extra letters or punctuation for the replacements to trigger.
+- You can cancel a replacement by typing any character other than a dot and erasing it before continuing.
